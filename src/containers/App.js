@@ -3,13 +3,11 @@
 import React, {PropTypes} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import FuelSavingsApp from '../components/FuelSavingsApp';
-import * as actions from '../actions/fuelSavingsActions';
 
 class App extends React.Component {
   render() {
     return (
-      <FuelSavingsApp appState={this.props.appState} actions={this.props.actions}/>
+
     );
   }
 }
@@ -21,13 +19,13 @@ App.propTypes = {
 
 function mapStateToProps(state) {
   return {
-    appState: state.fuelSavingsAppState
+    // appState: state.fuelSavingsAppState
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(actions, dispatch)
+    // actions: bindActionCreators(actions, dispatch)
   };
 }
 
