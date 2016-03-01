@@ -1,0 +1,37 @@
+/* Stylization for header
+  
+  Components:
+  - Main name display
+  - Navigational components
+  - Consistent across entire site
+*/
+
+.header {
+  // Clear margin around header
+  margin: 0em;
+
+  .my-name {
+    // Style for name display
+    font-size: 3em;
+    font-weight: 100;
+    text-align: center;
+    margin: 0em;
+    border-bottom: solid 1px black;
+  }
+
+  .nav-bar {
+    // Remove bullets and browser default settings
+    list-style-type: none;
+    margin: 0.25em 0em;
+    padding: 0em;
+    text-align: center;
+
+    li {
+      display: inline;
+      padding: 0em 0.5em;
+    
+    }
+
+  }
+
+}

@@ -1,11 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export default React.createClass({
+
   render() {
     return (
       <div>
-        <h2>{this.props.params.repoName}</h2>
-        <p>{this.props.params.userName}</p>
+        <h2>Projects</h2>
+        {this.props.children}
       </div>
     )
   }
