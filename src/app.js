@@ -4,19 +4,16 @@ import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 import About from './components/about';
 import Projects from './components/projects';
 import Home from './components/home';
-import NavLink from './components/navLink';
+import Contact from './components/contact';
+import NavBar from './components/navBar';
 import './styles/main.scss'; 
 
 const App = React.createClass({
   render() {
     return (
       <div className="header">
-        <h1 className="my-name">Ryan Ma</h1>
-        <ul className="nav-bar">
-          <li><NavLink to="/" onlyActiveOnIndex>Home</NavLink></li>
-          <li><NavLink to="/about">About</NavLink></li>
-          <li><NavLink to="/projects">Projects</NavLink></li>
-        </ul>
+        <h1 className="name-display">Ryan Ma</h1>
+        <NavBar location={this.props.location.pathname}/>
         {this.props.children}
       </div>
     )
@@ -29,6 +26,7 @@ ReactDOM.render((
       <IndexRoute component={Home}/>
       <Route path="/about" component={About}/>
       <Route path="/projects" component={Projects}/>
+      <Route path="/contact" component={Contact}/>
     </Route>
   </Router>
-), document.body);
+), document.getElementById('app'));
